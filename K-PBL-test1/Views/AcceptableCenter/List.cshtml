@@ -1,0 +1,25 @@
+﻿@*@model IEnumerable<K_PBL_test1.Models>*@
+@model K_PBL_test1.Models.AcceptableCenterViewModel
+
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>救急受入状況</h1>
+<table calass="table">
+    <tr>
+        @foreach (var itemCen in Model.Centers)
+        {
+            <td>@itemCen.Name</td>
+        }
+    </tr>
+    @foreach (var itemLv in Model.AcceptableLevels)
+    {
+    <tr>
+        <td>@itemLv.Name</td>
+    </tr>
+    }
+
+</table>
+
